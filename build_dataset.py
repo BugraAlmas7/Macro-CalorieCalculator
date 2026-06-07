@@ -8,25 +8,12 @@ from PIL import Image
 from google import genai
 from google.genai import types
 
-# =============================================================
-# KULLANIM:
-# Her hesap için ayrı terminal aç ve worker numarasını ver:
-#
-#   python build_dataset_parallel.py 1
-#   python build_dataset_parallel.py 2
-#   python build_dataset_parallel.py 3
-#   python build_dataset_parallel.py 4
-#
-# Tüm worker'lar bitince birleştir:
-#   python build_dataset_parallel.py merge
-# =============================================================
-
 # --- HER WORKER İÇİN API KEY ---
 API_KEYS = {
-    1: "AIzaSyABM_qFpReiKYX6aOHRYEW4owOcAVzuISQ",
-    2: "AIzaSyAmxVrSM7_u5A9sexdpvA7hEmH9h3Q1mts",
-    3: "AIzaSyDa9vndZvV_EiENkfXFiWFZeB0_x7j64XY",
-    4: "AIzaSyAkmBRJluo9AY1mgJ94QYidzdwkBdgL4hk",
+    1: "",
+    2: "",
+    3: "",
+    4: "",
 }
 
 # --- CONFIGURATION ---
@@ -34,7 +21,7 @@ IMAGE_DIR = "D:/Projeler/SlayCal/images/macro"
 MAIN_OUTPUT = "D:/Projeler/SlayCal/dataset_macro.json"
 BATCH_SIZE = 10
 MAX_RETRIES = 3
-NUM_WORKERS = len(API_KEYS)  # Hesap sayısına göre otomatik
+NUM_WORKERS = len(API_KEYS) 
 
 MODELS_TO_TRY = [
     'gemini-3.5-flash',
